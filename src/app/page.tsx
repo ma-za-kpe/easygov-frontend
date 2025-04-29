@@ -96,6 +96,7 @@ export default function Home() {
         setSuggestionStatus(null);
       }, 2000);
     } catch (error) {
+      console.log(error)
       setSuggestionStatus('Error submitting suggestion. Please try again.');
     }
   };

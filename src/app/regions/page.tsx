@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { fetchRegions } from '../../lib/api';
 import { Region } from '../../types/index';
-import { africanCountries, Country } from '../../lib/africanCountries';
+import { africanCountries } from '../../lib/africanCountries';
 
 export default function Regions() {
   const [regions, setRegions] = useState<Region[]>([]);
