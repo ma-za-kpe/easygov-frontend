@@ -120,11 +120,11 @@ const slides = [
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-lg">
           <div className="flex items-center bg-white p-3 rounded-lg shadow-sm">
-            <i className="fas fa-users text-2xl text-coral-500 mr-3"></i>
+            <i className="fas fa-users text-2xl text-teal-500 mr-3"></i>
             <span className="text-lg text-gray-600">10M users by 2030</span>
           </div>
           <div className="flex items-center bg-white p-3 rounded-lg shadow-sm">
-            <i className="fas fa-chart-pie text-2xl text-coral-500 mr-3"></i>
+            <i className="fas fa-chart-pie text-2xl  text-teal-500 mr-3"></i>
             <span className="text-lg text-gray-600">Growing civic tech market</span>
           </div>
         </div>

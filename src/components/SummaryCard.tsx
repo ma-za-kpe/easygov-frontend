@@ -23,7 +23,12 @@ const DEFAULT_LANGUAGE: SupportedLanguageCode = 'en';
 // Type for audio content selection
 type AudioContentType = 'title' | 'original' | 'explanation' | 'all';
 
-export default function SummaryCard({ summary }: { summary: Summary }) {
+interface SummaryCardProps {
+  summary: Summary;
+  language?: string;
+}
+
+export default function SummaryCard({ summary, language }: SummaryCardProps) {
   const [isExpanded, setIsExpanded] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
   const [audioContent, setAudioContent] = useState<AudioContentType>('all');
@@ -32,12 +37,17 @@ export default function SummaryCard({ summary }: { summary: Summary }) {
   const [selectedVoiceLanguage, setSelectedVoiceLanguage] = useState<SupportedLanguageCode>(DEFAULT_LANGUAGE);
   const [availableVoices, setAvailableVoices] = useState<SupportedLanguageCode[]>([]);
 
-  // Initialize based on summary language if it exists in our supported languages
+  // Initialize based on passed language prop or summary language if it exists in our supported languages
   useEffect(() => {
-    if (summary.language && summary.language in SUPPORTED_LANGUAGES) {
+    // First check the language prop from the parent component (highest priority)
+    if (language && language in SUPPORTED_LANGUAGES) {
+      setSelectedVoiceLanguage(language as SupportedLanguageCode);
+    }
+    // Fall back to summary language if available
+    else if (summary.language && summary.language in SUPPORTED_LANGUAGES) {
       setSelectedVoiceLanguage(summary.language as SupportedLanguageCode);
     }
-  }, [summary.language]);
+  }, [summary.language, language]);
 
   // Function to check which voices are available in the browser
   useEffect(() => {
@@ -95,14 +105,14 @@ export default function SummaryCard({ summary }: { summary: Summary }) {
   const getTextToRead = (): string => {
     switch (audioContent) {
       case 'title':
-        return summary.document_title;
+        return summary.document_title || summary.document_title;
       case 'original':
-        return summary.original_text || summary.text;
+        return summary.original_text || summary.original_text || summary.text;
       case 'explanation':
         return summary.explanation || "This budget impacts gender equality and reduced inequalities in your region.";
       case 'all':
       default:
-        return `${summary.document_title}. ${summary.original_text || summary.text}. ${summary.explanation || ''}`;
+        return `${summary.document_title || summary.document_title}. ${summary.original_text || summary.explanation || summary.text}. ${summary.explanation || ''}`;
     }
   };
 
@@ -185,6 +195,22 @@ export default function SummaryCard({ summary }: { summary: Summary }) {
       : SUPPORTED_LANGUAGES[DEFAULT_LANGUAGE].name;
   };
 
+  // Safely access fields according to the interface
+  const getTitle = () => summary.document_title;
+  const getSummaryText = () => summary.original_text || summary.text;
+  const getExplanation = () => summary.explanation || "This budget impacts gender equality and reduced inequalities in your region.";
+  const getCreatedDate = () => {
+    try {
+      return new Date(summary.created_at).toLocaleDateString();
+    } catch (e) {
+      return ""; // Return empty string if date is invalid
+    }
+  };
+
+  // Safely check if factCheck exists
+  const hasFactCheck = () => summary.factCheck && 
+    (typeof summary.factCheck.source_url === 'string' || typeof summary.factCheck.is_verified === 'boolean');
+
   return (
     <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 border-l-4 border-teal-500">
       {/* Color indicators for SDG 5 & SDG 10 */}
@@ -194,7 +220,7 @@ export default function SummaryCard({ summary }: { summary: Summary }) {
       </div>
       
       {/* Document Title */}
-      <h3 className="text-xl font-semibold text-teal-500 mb-2">{summary.document_title}</h3>
+      <h3 className="text-xl font-semibold text-teal-500 mb-2">{getTitle()}</h3>
       
       {/* Original Text Section */}
       <div className="mt-4">
@@ -224,7 +250,7 @@ export default function SummaryCard({ summary }: { summary: Summary }) {
         
         {/* Original excerpt - can be expanded */}
         <div className={`bg-gray-50 rounded-lg p-3 text-gray-700 ${isExpanded ? '' : 'line-clamp-3'}`}>
-          {summary.original_text || summary.text}
+          {getSummaryText()}
         </div>
       </div>
       
@@ -236,8 +262,7 @@ export default function SummaryCard({ summary }: { summary: Summary }) {
         </h4>
         <div className="bg-pink-50 rounded-lg p-3 border-l-2 border-pink-300">
           <p className="text-gray-700 text-base">
-            {summary.explanation || 
-            "This budget impacts gender equality and reduced inequalities in your region."}
+            {getExplanation()}
           </p>
         </div>
       </div>
@@ -350,16 +375,18 @@ export default function SummaryCard({ summary }: { summary: Summary }) {
             )}
           </button>
           
-          <FactCheckButton
-            sourceUrl={summary.factCheck.source_url}
-            isVerified={summary.factCheck.is_verified}
-          />
+          {hasFactCheck() && (
+            <FactCheckButton
+              sourceUrl={summary.factCheck.source_url}
+              isVerified={summary.factCheck.is_verified}
+            />
+          )}
         </div>
       </div>
       
       {/* Footer info */}
       <div className="mt-3 text-right text-xs text-gray-500">
-        {new Date(summary.created_at).toLocaleDateString()}
+        {getCreatedDate()}
       </div>
     </div>
   );
