@@ -1,0 +1,66 @@
+// src/lib/africanCountries.ts
+export interface Country {
+    name: string;
+    code: string;
+    emoji: string;
+    isEastAfrica: boolean;
+  }
+  
+  export const africanCountries: Country[] = [
+    // East Africa (prioritized)
+    { name: "Uganda", code: "UG", emoji: "🇺🇬", isEastAfrica: true },
+    { name: "Kenya", code: "KE", emoji: "🇰🇪", isEastAfrica: true },
+    { name: "Tanzania", code: "TZ", emoji: "🇹🇿", isEastAfrica: true },
+    { name: "Rwanda", code: "RW", emoji: "🇷🇼", isEastAfrica: true },
+    { name: "Burundi", code: "BI", emoji: "🇧🇮", isEastAfrica: true },
+    { name: "South Sudan", code: "SS", emoji: "🇸🇸", isEastAfrica: true },
+    { name: "Ethiopia", code: "ET", emoji: "🇪🇹", isEastAfrica: true },
+    { name: "Somalia", code: "SO", emoji: "🇸🇴", isEastAfrica: true },
+    // Other African countries
+    { name: "Algeria", code: "DZ", emoji: "🇩🇿", isEastAfrica: false },
+    { name: "Angola", code: "AO", emoji: "🇦🇴", isEastAfrica: false },
+    { name: "Benin", code: "BJ", emoji: "🇧🇯", isEastAfrica: false },
+    { name: "Botswana", code: "BW", emoji: "🇧🇼", isEastAfrica: false },
+    { name: "Burkina Faso", code: "BF", emoji: "🇧🇫", isEastAfrica: false },
+    { name: "Cameroon", code: "CM", emoji: "🇨🇲", isEastAfrica: false },
+    { name: "Cape Verde", code: "CV", emoji: "🇨🇻", isEastAfrica: false },
+    { name: "Central African Republic", code: "CF", emoji: "🇨🇫", isEastAfrica: false },
+    { name: "Chad", code: "TD", emoji: "🇹🇩", isEastAfrica: false },
+    { name: "Comoros", code: "KM", emoji: "🇰🇲", isEastAfrica: false },
+    { name: "Congo", code: "CG", emoji: "🇨🇬", isEastAfrica: false },
+    { name: "DR Congo", code: "CD", emoji: "🇨🇩", isEastAfrica: false },
+    { name: "Djibouti", code: "DJ", emoji: "🇩🇯", isEastAfrica: false },
+    { name: "Egypt", code: "EG", emoji: "🇪🇬", isEastAfrica: false },
+    { name: "Equatorial Guinea", code: "GQ", emoji: "🇬🇶", isEastAfrica: false },
+    { name: "Eritrea", code: "ER", emoji: "🇪🇷", isEastAfrica: false },
+    { name: "Eswatini", code: "SZ", emoji: "🇸🇿", isEastAfrica: false },
+    { name: "Gabon", code: "GA", emoji: "🇬🇦", isEastAfrica: false },
+    { name: "Gambia", code: "GM", emoji: "🇬🇲", isEastAfrica: false },
+    { name: "Ghana", code: "GH", emoji: "🇬🇭", isEastAfrica: false },
+    { name: "Guinea", code: "GN", emoji: "🇬🇳", isEastAfrica: false },
+    { name: "Guinea-Bissau", code: "GW", emoji: "🇬🇼", isEastAfrica: false },
+    { name: "Ivory Coast", code: "CI", emoji: "🇨🇮", isEastAfrica: false },
+    { name: "Lesotho", code: "LS", emoji: "🇱🇸", isEastAfrica: false },
+    { name: "Liberia", code: "LR", emoji: "🇱🇷", isEastAfrica: false },
+    { name: "Libya", code: "LY", emoji: "🇱🇾", isEastAfrica: false },
+    { name: "Madagascar", code: "MG", emoji: "🇲🇬", isEastAfrica: false },
+    { name: "Malawi", code: "MW", emoji: "🇲🇼", isEastAfrica: false },
+    { name: "Mali", code: "ML", emoji: "🇲🇱", isEastAfrica: false },
+    { name: "Mauritania", code: "MR", emoji: "🇲🇷", isEastAfrica: false },
+    { name: "Mauritius", code: "MU", emoji: "🇲🇺", isEastAfrica: false },
+    { name: "Morocco", code: "MA", emoji: "🇲🇦", isEastAfrica: false },
+    { name: "Mozambique", code: "MZ", emoji: "🇲🇿", isEastAfrica: false },
+    { name: "Namibia", code: "NA", emoji: "🇳🇦", isEastAfrica: false },
+    { name: "Niger", code: "NE", emoji: "🇳🇪", isEastAfrica: false },
+    { name: "Nigeria", code: "NG", emoji: "🇳🇬", isEastAfrica: false },
+    { name: "Sao Tome and Principe", code: "ST", emoji: "🇸🇹", isEastAfrica: false },
+    { name: "Senegal", code: "SN", emoji: "🇸🇳", isEastAfrica: false },
+    { name: "Seychelles", code: "SC", emoji: "🇸🇨", isEastAfrica: false },
+    { name: "Sierra Leone", code: "SL", emoji: "🇸🇱", isEastAfrica: false },
+    { name: "South Africa", code: "ZA", emoji: "🇿🇦", isEastAfrica: false },
+    { name: "Sudan", code: "SD", emoji: "🇸🇩", isEastAfrica: false },
+    { name: "Togo", code: "TG", emoji: "🇹🇬", isEastAfrica: false },
+    { name: "Tunisia", code: "TN", emoji: "🇹🇳", isEastAfrica: false },
+    { name: "Zambia", code: "ZM", emoji: "🇿🇲", isEastAfrica: false },
+    { name: "Zimbabwe", code: "ZW", emoji: "🇿🇼", isEastAfrica: false },
+  ];

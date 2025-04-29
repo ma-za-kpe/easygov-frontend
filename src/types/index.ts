@@ -19,3 +19,10 @@ export interface Region {
     created_at: string;
     factCheck: FactCheck;
   }
+
+  export interface Suggestion {
+    title: string;
+    url: string;
+    comment: string;
+    email?: string;
+  }

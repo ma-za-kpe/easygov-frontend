@@ -11,7 +11,7 @@ export default function Header() {
     <header className="bg-teal-500 text-white p-4 sticky top-0 z-10 shadow-lg">
       <nav className="container mx-auto flex justify-between items-center">
         <Link href="/" className="text-2xl font-bold tracking-tight">
-          EasyGov
+        WaziGov
         </Link>
         <div className="md:hidden">
           <button onClick={() => setIsOpen(!isOpen)} className="focus:outline-none">
@@ -30,7 +30,7 @@ export default function Header() {
             <Link href="/" className="block py-2 md:py-0 hover:text-yellow-400 transition-colors">Home</Link>
           </li>
           <li>
-            <Link href="/women" className="block py-2 md:py-0 hover:text-yellow-400 transition-colors">Gender Equality</Link>
+            <Link href="/women" className="block py-2 md:py-0 hover:text-yellow-400 transition-colors">About</Link>
           </li>
           <li>
             <Link href="/regions" className="block py-2 md:py-0 hover:text-yellow-400 transition-colors">Regions</Link>

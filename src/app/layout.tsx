@@ -7,7 +7,7 @@ import Header from '../components/Header';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'EasyGov - Empowering Women & Communities',
+  title: 'WaziGov - Empowering Women & Communities',
   description: 'Summarizing government documents to promote women’s rights (SDG 5) and reduce inequalities (SDG 10).',
 };
 
