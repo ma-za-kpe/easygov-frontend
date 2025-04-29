@@ -15,6 +15,8 @@ export default function About() {
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 768);
     };
+
+    console.log(isMobile)
     
     checkMobile();
     window.addEventListener('resize', checkMobile);

@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import FactCheckButton from './FactCheckButton';
 import { Summary } from '../types';
-import { Volume2, VolumeX, ChevronDown, ChevronUp, BookOpen, BarChart, Info } from 'lucide-react';
+import { Volume2, VolumeX, ChevronDown, ChevronUp, BookOpen, Info } from 'lucide-react';
 
 // Define language type to ensure type safety
 type SupportedLanguageCode = 'en' | 'sw' | 'fr' | 'ha' | 'yo' | 'ar';
