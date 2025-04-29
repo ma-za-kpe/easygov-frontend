@@ -203,6 +203,7 @@ export default function SummaryCard({ summary, language }: SummaryCardProps) {
     try {
       return new Date(summary.created_at).toLocaleDateString();
     } catch (e) {
+      console.log(e)
       return ""; // Return empty string if date is invalid
     }
   };
