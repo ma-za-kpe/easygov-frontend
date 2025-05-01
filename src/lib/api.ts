@@ -29,7 +29,10 @@ export const fetchSummaries = async (region: string, language: string): Promise<
   try {
     // Use trailing slash to avoid redirects
     const url = `/api/summaries/?region=${region}&language=${language}`;
-    console.log(`Fetching summaries: ${process.env.NEXT_PUBLIC_API_URL}${url}`);
+    // Only log in development environment
+    if (process.env.NODE_ENV === 'development') {
+      console.log(`Fetching summaries for region: ${region}, language: ${language}`);
+    }
     
     const response = await api.get(url);
     return response.data;
@@ -46,7 +49,10 @@ export const fetchRegions = async (): Promise<Region[]> => {
   try {
     // Use trailing slash to avoid redirects
     const url = '/api/regions/';
-    console.log(`Fetching regions: ${process.env.NEXT_PUBLIC_API_URL}${url}`);
+    // Only log in development environment
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Fetching regions');
+    }
     
     const response = await api.get(url);
     return response.data;
