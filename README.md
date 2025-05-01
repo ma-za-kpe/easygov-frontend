@@ -215,4 +215,4 @@ SOFTWARE.
 
 ## Contact
 
-For questions, feedback, or collaboration, open an issue on GitHub or contact the WaziGov Team at **[insert contact email]**.
+For questions, feedback, or collaboration, open an issue on GitHub or contact the WaziGov Team at **[makpalyy@gmail.com]**.
