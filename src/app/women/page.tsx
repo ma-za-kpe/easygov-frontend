@@ -33,299 +33,592 @@ export default function About() {
     { name: 'Samuel Kofi', role: 'Business Dev', linkedin: 'https://linkedin.com/in/samuelkofi', avatar: '/avatars/samuel.jpg' },
   ];
 
-  // Slide data with icons
-  // Slide data with redesigned content
-const slides = [
-  {
-    title: 'WaziGov: Empowering Communities',
-    content: (
-      <div className="flex flex-col items-center text-center space-y-6 px-4">
-        <div className="flex items-center justify-center w-20 h-20 bg-white rounded-full shadow-lg">
-          <i className="fas fa-hands-helping text-4xl text-teal-500"></i>
-        </div>
-        <p className="text-2xl md:text-3xl font-semibold text-white leading-tight">
-          Simplifying Government Access for Gender Equality (SDG 5) & Reduced Inequalities (SDG 10)
-        </p>
-        <p className="text-lg text-white">GNEC Hackathon 2025</p>
-      </div>
-    ),
-    bg: 'bg-gradient-to-br from-teal-600 to-coral-600',
-  },
-  {
-    title: 'The Problem',
-    content: (
-      <div className="flex flex-col md:flex-row items-center gap-8 px-4">
-        <div className="flex items-center justify-center w-16 h-16 bg-coral-100 rounded-full shadow-md">
-          <i className="fas fa-exclamation-triangle text-3xl text-coral-500"></i>
-        </div>
-        <div className="space-y-4">
-          <p className="text-xl md:text-2xl font-medium text-gray-800">
-            Over 60% of African women face barriers to government information:
+  const slides = [
+    {
+      title: 'WaziGov',
+      content: (
+        <div className="flex flex-col items-center justify-center text-center space-y-6 px-6 h-full">
+          <div className="flex items-center justify-center w-32 h-32 bg-white rounded-full shadow-xl">
+            <i className="fas fa-hands-helping text-6xl text-teal-600"></i>
+          </div>
+          <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight drop-shadow-md">
+            Clear Policies, Empowered Women
+          </h1>
+          <h2 className="text-2xl md:text-3xl font-medium text-white drop-shadow-md">
+            Transforming Lives for SDG 5 & 10
+          </h2>
+          <p className="text-xl text-white bg-black bg-opacity-20 px-4 py-2 rounded-lg">
+            Maku Mazakpe | Arua, Uganda | GNEC Hackathon 2025
           </p>
-          <ul className="space-y-3 text-lg text-gray-600">
-            <li className="flex items-center">
-              <i className="fas fa-file-alt text-teal-500 mr-3"></i> Complex legal jargon
-            </li>
-            <li className="flex items-center">
-              <i className="fas fa-book text-teal-500 mr-3"></i> Literacy and language barriers
-            </li>
-            <li className="flex items-center">
-              <i className="fas fa-low-vision text-teal-500 mr-3"></i> Inaccessible formats
-            </li>
-            <li className="flex items-center">
-              <i className="fas fa-map-marked-alt text-teal-500 mr-3"></i> Regional disparities
-            </li>
-          </ul>
+          <p className="text-2xl italic text-white font-medium drop-shadow-md">
+            "Empowering Every Woman to Know Her Rights"
+          </p>
         </div>
-      </div>
-    ),
-    bg: 'bg-white',
-  },
-  {
-    title: 'Our Solution: WaziGov',
-    content: (
-      <div className="flex flex-col md:flex-row items-center gap-8 px-4">
-        <div className="flex items-center justify-center w-16 h-16 bg-teal-100 rounded-full shadow-md">
-          <i className="fas fa-lightbulb text-3xl text-teal-500"></i>
-        </div>
-        <div className="space-y-4">
-          <p className="text-xl md:text-2xl font-medium text-gray-800">WaziGov provides:</p>
-          <ul className="space-y-3 text-lg text-gray-600">
-            <li className="flex items-center">
-              <i className="fas fa-robot text-coral-500 mr-3"></i> AI-summarized documents
-            </li>
-            <li className="flex items-center">
-              <i className="fas fa-language text-coral-500 mr-3"></i> Multilingual support
-            </li>
-            <li className="flex items-center">
-              <i className="fas fa-volume-up text-coral-500 mr-3"></i> Text-to-speech
-            </li>
-            <li className="flex items-center">
-              <i className="fas fa-globe-africa text-coral-500 mr-3"></i> Region-specific access
-            </li>
-          </ul>
-        </div>
-      </div>
-    ),
-    bg: 'bg-teal-50',
-  },
-  {
-    title: 'Market Opportunity',
-    content: (
-      <div className="flex flex-col items-center text-center space-y-6 px-4">
-        <div className="flex items-center justify-center w-16 h-16 bg-yellow-100 rounded-full shadow-md">
-          <i className="fas fa-chart-line text-3xl text-yellow-500"></i>
-        </div>
-        <p className="text-2xl md:text-3xl font-semibold text-gray-800">
-          500M+ African women and communities
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-lg">
-          <div className="flex items-center bg-white p-3 rounded-lg shadow-sm">
-            <i className="fas fa-users text-2xl text-teal-500 mr-3"></i>
-            <span className="text-lg text-gray-600">10M users by 2030</span>
-          </div>
-          <div className="flex items-center bg-white p-3 rounded-lg shadow-sm">
-            <i className="fas fa-chart-pie text-2xl  text-teal-500 mr-3"></i>
-            <span className="text-lg text-gray-600">Growing civic tech market</span>
-          </div>
-        </div>
-      </div>
-    ),
-    bg: 'bg-yellow-100',
-  },
-  {
-    title: 'Business Model',
-    content: (
-      <div className="flex flex-col md:flex-row items-center gap-8 px-4">
-        <div className="flex items-center justify-center w-16 h-16 bg-coral-100 rounded-full shadow-md">
-          <i className="fas fa-coins text-3xl text-coral-500"></i>
-        </div>
-        <div className="space-y-4">
-          <p className="text-xl md:text-2xl font-medium text-gray-800">Freemium Model:</p>
-          <ul className="space-y-3 text-lg text-gray-600">
-            <li className="flex items-center">
-              <i className="fas fa-unlock text-teal-500 mr-3"></i> Free summaries & TTS
-            </li>
-            <li className="flex items-center">
-              <i className="fas fa-star text-teal-500 mr-3"></i> Premium reports
-            </li>
-            <li className="flex items-center">
-              <i className="fas fa-handshake text-teal-500 mr-3"></i> NGO partnerships
-            </li>
-            <li className="flex items-center">
-              <i className="fas fa-hand-holding-usd text-teal-500 mr-3"></i> Civic tech grants
-            </li>
-          </ul>
-        </div>
-      </div>
-    ),
-    bg: 'bg-coral-50',
-  },
-  {
-    title: 'Technology Stack',
-    content: (
-      <div className="flex flex-col md:flex-row items-center gap-8 px-4">
-        <div className="flex items-center justify-center w-16 h-16 bg-gray-100 rounded-full shadow-md">
-          <i className="fas fa-code text-3xl text-gray-700"></i>
-        </div>
-        <div className="space-y-4">
-          <p className="text-xl md:text-2xl font-medium text-gray-800">Powered by:</p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="flex items-center bg-white p-3 rounded-lg shadow-sm">
-              <i className="fab fa-react text-2xl text-blue-500 mr-3"></i>
-              <span className="text-lg text-gray-600">Next.js frontend</span>
-            </div>
-            <div className="flex items-center bg-white p-3 rounded-lg shadow-sm">
-              <i className="fas fa-brain text-2xl text-purple-500 mr-3"></i>
-              <span className="text-lg text-gray-600">Hugging Face LLMs</span>
-            </div>
-            <div className="flex items-center bg-white p-3 rounded-lg shadow-sm">
-              <i className="fab fa-python text-2xl text-green-500 mr-3"></i>
-              <span className="text-lg text-gray-600">Django REST APIs</span>
-            </div>
-            <div className="flex items-center bg-white p-3 rounded-lg shadow-sm">
-              <i className="fas fa-volume-up text-2xl text-red-500 mr-3"></i>
-              <span className="text-lg text-gray-600">Web Speech API</span>
-            </div>
+      ),
+      bg: 'bg-gradient-to-br from-teal-700 to-coral-700',
+      style: {
+        position: 'relative',
+        overflow: 'hidden',
+      },
+      after: `
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          opacity: 0.15;
+          background: repeating-linear-gradient(
+            45deg,
+            transparent,
+            transparent 50px,
+            rgba(255, 255, 255, 0.2) 50px,
+            rgba(255, 255, 255, 0.2) 100px
+          );
+          z-index: 0;
+        }
+      `,
+    },
+    {
+      title: 'The Problem',
+      content: (
+        <div className="px-6 h-full">
+          <div className="space-y-4 max-w-4xl mx-auto">
+            {/* <h2 className="text-3xl md:text-4xl font-bold text-blue-900">
+              Why Women Miss Out
+            </h2>
+            <h3 className="text-xl md:text-2xl font-medium text-gray-700">
+              Barriers to Government Policies in Uganda
+            </h3> */}
+            <ul className="space-y-4 text-lg text-gray-700">
+              <li className="flex items-center bg-white p-3 rounded-lg shadow-md">
+                <div className="flex items-center justify-center min-w-12 h-12 bg-teal-100 rounded-full mr-4">
+                  <i className="fas fa-file-alt text-2xl text-teal-600"></i>
+                </div>
+                <span>Dense, jargon-heavy documents exclude 75% of women</span>
+              </li>
+              <li className="flex items-center bg-white p-3 rounded-lg shadow-md">
+                <div className="flex items-center justify-center min-w-12 h-12 bg-teal-100 rounded-full mr-4">
+                  <i className="fas fa-language text-2xl text-teal-600"></i>
+                </div>
+                <span>Only 20% of Ugandans speak English fluently</span>
+              </li>
+              <li className="flex items-center bg-white p-3 rounded-lg shadow-md">
+                <div className="flex items-center justify-center min-w-12 h-12 bg-teal-100 rounded-full mr-4">
+                  <i className="fas fa-book text-2xl text-teal-600"></i>
+                </div>
+                <span>30% of rural women have no formal education</span>
+              </li>
+              <li className="flex items-center bg-white p-3 rounded-lg shadow-md">
+                <div className="flex items-center justify-center min-w-12 h-12 bg-teal-100 rounded-full mr-4">
+                  <i className="fas fa-wifi text-2xl text-teal-600"></i>
+                </div>
+                <span>Limited internet (10% rural access) isolates communities</span>
+              </li>
+            </ul>
           </div>
         </div>
-      </div>
-    ),
-    bg: 'bg-white',
-  },
-  {
-    title: 'Impact (SDG 5 & 10)',
-    content: (
-      <div className="flex flex-col md:flex-row items-center gap-8 px-4">
-        <div className="flex items-center justify-center w-16 h-16 bg-teal-100 rounded-full shadow-md">
-          <i className="fas fa-hand-holding-heart text-3xl text-teal-500"></i>
+      ),
+      bg: '#1e3a8a',
+      style: {
+        position: 'relative',
+      },
+      titleStyle: {
+        color: '#1e3a8a', // Blue-900 color for visibility against light backgrounds
+        fontWeight: 'bold'
+      }
+    },
+    {
+      title: 'Our Solution: WaziGov',
+      content: (
+        <div className="px-6 h-full">
+          <div className="space-y-4 max-w-4xl mx-auto">
+            <ul className="space-y-4 text-lg">
+              <li className="flex items-center bg-white bg-opacity-20 backdrop-blur-sm p-3 rounded-lg shadow-md">
+                <div className="flex items-center justify-center min-w-12 h-12 bg-white rounded-full mr-4">
+                  <i className="fas fa-robot text-2xl text-yellow-500"></i>
+                </div>
+                <span className="text-yellow-500 font-medium">AI-powered summaries of complex budgets</span>
+              </li>
+              <li className="flex items-center bg-white bg-opacity-20 backdrop-blur-sm p-3 rounded-lg shadow-md">
+                <div className="flex items-center justify-center min-w-12 h-12 bg-white rounded-full mr-4">
+                  <i className="fas fa-language text-2xl text-yellow-500"></i>
+                </div>
+                <span className="text-yellow-500 font-medium">Translated into Swahili, Luganda, and more</span>
+              </li>
+              <li className="flex items-center bg-white bg-opacity-20 backdrop-blur-sm p-3 rounded-lg shadow-md">
+                <div className="flex items-center justify-center min-w-12 h-12 bg-white rounded-full mr-4">
+                  <i className="fas fa-volume-up text-2xl text-yellow-500"></i>
+                </div>
+                <span className="text-yellow-500 font-medium">Audio summaries for low-literacy users</span>
+              </li>
+              <li className="flex items-center bg-white bg-opacity-20 backdrop-blur-sm p-3 rounded-lg shadow-md">
+                <div className="flex items-center justify-center min-w-12 h-12 bg-white rounded-full mr-4">
+                  <i className="fas fa-globe text-2xl text-yellow-500"></i>
+                </div>
+                <span className="text-yellow-500 font-medium">Accessible via app, SMS, and radio</span>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div className="space-y-4">
-          <p className="text-xl md:text-2xl font-medium text-gray-800">Empowering Communities:</p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="flex items-center bg-white p-3 rounded-lg shadow-sm">
-              <div className="flex h-10 w-10 rounded-full bg-pink-100 items-center justify-center mr-3">
-                <i className="fas fa-venus text-xl text-pink-500"></i>
+      ),
+      bg: 'bg-gradient-to-br from-teal-700 to-teal-600',
+      style: {
+        position: 'relative',
+      },
+      after: `
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          opacity: 0.1;
+          background: repeating-linear-gradient(
+            135deg,
+            transparent,
+            transparent 50px,
+            rgba(255, 255, 255, 0.2) 50px,
+            rgba(255, 255, 255, 0.2) 100px
+          );
+          z-index: 0;
+        }
+      `,
+    },
+    {
+      title: 'Market Opportunity',
+      content: (
+        <div className="flex flex-col items-center text-center space-y-6 px-6 h-full">
+          <div className="flex items-center justify-center w-28 h-28 bg-teal-600 rounded-full shadow-xl mb-4">
+            <i className="fas fa-chart-line text-5xl text-white"></i>
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-blue-900">
+            A Growing Opportunity
+          </h2>
+          <h3 className="text-xl md:text-2xl font-medium text-gray-700 mb-4">
+            Empowering Africa's Women
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-3xl">
+            <div className="flex items-center bg-white p-4 rounded-lg shadow-lg border-l-4 border-teal-600">
+              <div className="flex items-center justify-center min-w-16 h-16 bg-teal-100 rounded-full mr-4">
+                <i className="fas fa-users text-3xl text-teal-600"></i>
               </div>
-              <span className="text-lg text-gray-600">Women’s rights (SDG 5)</span>
+              <span className="text-xl text-gray-700 font-medium">12M women in Uganda</span>
             </div>
-            <div className="flex items-center bg-white p-3 rounded-lg shadow-sm">
-              <div className="flex h-10 w-10 rounded-full bg-blue-100 items-center justify-center mr-3">
-                <i className="fas fa-balance-scale text-xl text-blue-500"></i>
+            <div className="flex items-center bg-white p-4 rounded-lg shadow-lg border-l-4 border-teal-600">
+              <div className="flex items-center justify-center min-w-16 h-16 bg-teal-100 rounded-full mr-4">
+                <i className="fas fa-globe text-3xl text-teal-600"></i>
               </div>
-              <span className="text-lg text-gray-600">Equitable access (SDG 10)</span>
+              <span className="text-xl text-gray-700 font-medium">300M in East Africa</span>
             </div>
-            <div className="flex items-center bg-white p-3 rounded-lg shadow-sm">
-              <div className="flex h-10 w-10 rounded-full bg-green-100 items-center justify-center mr-3">
-                <i className="fas fa-users text-xl text-green-500"></i>
+            <div className="flex items-center bg-white p-4 rounded-lg shadow-lg border-l-4 border-coral-600">
+              <div className="flex items-center justify-center min-w-16 h-16 bg-teal-100 rounded-full mr-4">
+                <i className="fas fa-coins text-3xl text-teal-600"></i>
               </div>
-              <span className="text-lg text-gray-600">10,000+ users by 2026</span>
+              <span className="text-xl text-gray-700 font-medium">$360B gender equality market</span>
             </div>
-            <div className="flex items-center bg-white p-3 rounded-lg shadow-sm">
-              <div className="flex h-10 w-10 rounded-full bg-yellow-100 items-center justify-center mr-3">
-                <i className="fas fa-handshake text-xl text-yellow-500"></i>
+            <div className="flex items-center bg-white p-4 rounded-lg shadow-lg border-l-4 border-coral-600">
+              <div className="flex items-center justify-center min-w-16 h-16 bg-teal-100 rounded-full mr-4">
+                <i className="fas fa-phone text-3xl text-teal-600"></i>
               </div>
-              <span className="text-lg text-gray-600">5+ NGO partnerships</span>
+              <span className="text-xl text-gray-700 font-medium">70% mobile penetration</span>
             </div>
           </div>
         </div>
-      </div>
-    ),
-    bg: 'bg-teal-50',
-  },
-  {
-    title: 'Our Team',
-    content: (
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-6 px-4">
-        {team.map((member) => (
-          <div
-            key={member.name}
-            className="flex flex-col items-center bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow"
+      ),
+      bg: 'bg-gradient-to-br from-teal-50 to-teal-500',
+      style: {
+        position: 'relative',
+      },
+      titleStyle: {
+        color: '#1e3a8a', // Blue-900 color for visibility against light backgrounds
+        fontWeight: 'bold'
+      }
+    },
+    {
+      title: 'Business Model',
+      content: (
+        <div className="px-6 h-full">
+          <div className="space-y-4 max-w-4xl mx-auto">
+            {/* <h2 className="text-3xl md:text-4xl font-bold text-white drop-shadow-md">
+              Sustainable Impact
+            </h2>
+            <h3 className="text-xl md:text-2xl font-medium text-white drop-shadow-md">
+              How WaziGov Thrives
+            </h3> */}
+            <ul className="space-y-4 text-lg">
+              <li className="flex items-center bg-white bg-opacity-20 backdrop-blur-sm p-3 rounded-lg shadow-md">
+                <div className="flex items-center justify-center min-w-12 h-12 bg-white rounded-full mr-4">
+                  <i className="fas fa-unlock text-2xl text-yellow-500"></i>
+                </div>
+                <span className="text-yellow-500 font-medium">Free access to summaries and audio</span>
+              </li>
+              <li className="flex items-center bg-white bg-opacity-20 backdrop-blur-sm p-3 rounded-lg shadow-md">
+                <div className="flex items-center justify-center min-w-12 h-12 bg-white rounded-full mr-4">
+                  <i className="fas fa-star text-2xl text-yellow-500"></i>
+                </div>
+                <span className="text-yellow-500 font-medium">Premium features (e.g., personalized alerts)</span>
+              </li>
+              <li className="flex items-center bg-white bg-opacity-20 backdrop-blur-sm p-3 rounded-lg shadow-md">
+                <div className="flex items-center justify-center min-w-12 h-12 bg-white rounded-full mr-4">
+                  <i className="fas fa-handshake text-2xl text-yellow-500"></i>
+                </div>
+                <span className="text-yellow-500 font-medium">NGO grants (e.g., GNEC, UN Women)</span>
+              </li>
+              <li className="flex items-center bg-white bg-opacity-20 backdrop-blur-sm p-3 rounded-lg shadow-md">
+                <div className="flex items-center justify-center min-w-12 h-12 bg-white rounded-full mr-4">
+                  <i className="fas fa-hand-holding-usd text-2xl text-yellow-500"></i>
+                </div>
+                <span className="text-yellow-500 font-medium">Government partnerships for policy dissemination</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      ),
+      bg: 'bg-gradient-to-br from-coral-700 to-coral-600',
+      style: {
+        position: 'relative',
+      },
+      after: `
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          opacity: 0.1;
+          background: repeating-linear-gradient(
+            45deg,
+            transparent,
+            transparent 50px,
+            rgba(255, 255, 255, 0.2) 50px,
+            rgba(255, 255, 255, 0.2) 100px
+          );
+          z-index: 0;
+        }
+      `,
+    },
+    {
+      title: 'Technology Stack',
+      content: (
+        <div className="px-6 h-full">
+          <div className="space-y-4 max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-blue-900">
+              Built to Scale
+            </h2>
+            <h3 className="text-xl md:text-2xl font-medium text-gray-700">
+              WaziGov's Tech Powerhouse
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="flex items-center bg-white p-4 rounded-lg shadow-lg border-l-4 border-green-500">
+                <div className="flex items-center justify-center min-w-14 h-14 bg-green-100 rounded-full mr-4">
+                  <i className="fab fa-python text-3xl text-green-600"></i>
+                </div>
+                <span className="text-lg text-gray-700 font-medium">Django & PostgreSQL</span>
+              </div>
+              <div className="flex items-center bg-white p-4 rounded-lg shadow-lg border-l-4 border-purple-500">
+                <div className="flex items-center justify-center min-w-14 h-14 bg-purple-100 rounded-full mr-4">
+                  <i className="fas fa-brain text-3xl text-purple-600"></i>
+                </div>
+                <span className="text-lg text-gray-700 font-medium">Hugging Face NLP</span>
+              </div>
+              <div className="flex items-center bg-white p-4 rounded-lg shadow-lg border-l-4 border-red-500">
+                <div className="flex items-center justify-center min-w-14 h-14 bg-red-100 rounded-full mr-4">
+                  <i className="fas fa-tasks text-3xl text-red-600"></i>
+                </div>
+                <span className="text-lg text-gray-700 font-medium">Celery & Redis</span>
+              </div>
+              <div className="flex items-center bg-white p-4 rounded-lg shadow-lg border-l-4 border-blue-500">
+                <div className="flex items-center justify-center min-w-14 h-14 bg-blue-100 rounded-full mr-4">
+                  <i className="fas fa-volume-up text-3xl text-blue-600"></i>
+                </div>
+                <span className="text-lg text-gray-700 font-medium">Text-to-Speech API</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      ),
+      bg: 'bg-gradient-to-br from-yellow-50 to-yellow-500',
+      style: {
+        position: 'relative',
+      },
+      titleStyle: {
+        color: '#1e3a8a', // Blue-900 color for visibility against light backgrounds
+        fontWeight: 'bold'
+      }
+    },
+    {
+      title: 'Impact (SDG 5 & 10)',
+      content: (
+        <div className="px-6 h-full">
+          <div className="space-y-4 max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-white drop-shadow-md">
+              Empowering Communities
+            </h2>
+            <h3 className="text-xl md:text-2xl font-medium text-white drop-shadow-md">
+              Advancing SDG 5 & 10
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="flex items-center bg-white p-4 rounded-lg shadow-lg">
+                <div className="flex items-center justify-center min-w-14 h-14 bg-pink-100 rounded-full mr-4">
+                  <i className="fas fa-venus text-3xl text-pink-600"></i>
+                </div>
+                <span className="text-lg text-gray-700 font-medium">Gender Equality (SDG 5)</span>
+              </div>
+              <div className="flex items-center bg-white p-4 rounded-lg shadow-lg">
+                <div className="flex items-center justify-center min-w-14 h-14 bg-blue-100 rounded-full mr-4">
+                  <i className="fas fa-balance-scale text-3xl text-blue-600"></i>
+                </div>
+                <span className="text-lg text-gray-700 font-medium">Reduced Inequalities (SDG 10)</span>
+              </div>
+              <div className="flex items-center bg-white p-4 rounded-lg shadow-lg">
+                <div className="flex items-center justify-center min-w-14 h-14 bg-green-100 rounded-full mr-4">
+                  <i className="fas fa-users text-3xl text-green-600"></i>
+                </div>
+                <span className="text-lg text-gray-700 font-medium">100,000 users by 2026</span>
+              </div>
+              <div className="flex items-center bg-white p-4 rounded-lg shadow-lg">
+                <div className="flex items-center justify-center min-w-14 h-14 bg-yellow-100 rounded-full mr-4">
+                  <i className="fas fa-handshake text-3xl text-yellow-600"></i>
+                </div>
+                <span className="text-lg text-gray-700 font-medium">10+ NGO partnerships</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      ),
+      bg: 'bg-gradient-to-br from-teal-700 to-teal-600',
+      style: {
+        position: 'relative',
+      },
+      after: `
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          opacity: 0.1;
+          background: repeating-linear-gradient(
+            135deg,
+            transparent,
+            transparent 50px,
+            rgba(255, 255, 255, 0.2) 50px,
+            rgba(255, 255, 255, 0.2) 100px
+          );
+          z-index: 0;
+        }
+      `,
+    },
+    {
+      title: 'Our Team',
+      content: (
+        <div className="flex flex-col items-center px-6 h-full">
+          <div className="flex items-center justify-center w-28 h-28 bg-teal-600 rounded-full shadow-xl mb-6">
+            <i className="fas fa-users text-5xl text-white"></i>
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-blue-900 text-center mb-6">
+            Meet Our Dedicated Team
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-5xl">
+            {[
+              { name: 'Maku Mazakpe', role: 'TechLead', linkedin: 'https://www.linkedin.com/in/maku-mazakpe-700a3a165/' },
+              { name: 'Sarah Ajekwe', role: 'Marketing', linkedin: 'https://www.linkedin.com/in/kadoon-ajekwe/' },
+              { name: 'Awadifo Jeninga', role: 'Head of Community', linkedin: 'https://www.linkedin.com/in/awadifo-jeninga-384072158/' }
+            ].map((member) => (
+              <div
+                key={member.name}
+                className="flex flex-col items-center bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow border-t-4 border-teal-600"
+              >
+                <div className="w-20 h-20 bg-gradient-to-r from-teal-600 to-coral-600 rounded-full flex items-center justify-center text-white text-2xl mb-4">
+                  {member.name.split(' ').map(n => n[0]).join('')}
+                </div>
+                <p className="text-xl font-bold text-teal-700 mb-1">{member.name}</p>
+                <p className="text-lg text-gray-600 mb-3">{member.role}</p>
+                <a
+                  href={member.linkedin}
+                  target="_blank"
+                  className="inline-flex items-center bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-lg font-medium hover:bg-blue-200 transition-colors"
+                  aria-label={`Visit ${member.name}'s LinkedIn profile`}
+                >
+                  <i className="fab fa-linkedin mr-2"></i> LinkedIn
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+      ),
+      bg: 'bg-gradient-to-br from-yellow-50 to-yellow-100',
+      style: {
+        position: 'relative',
+      },
+      titleStyle: {
+        color: '#1e3a8a', // Blue-900 color for visibility against light backgrounds
+        fontWeight: 'bold'
+      }
+    },
+    {
+      title: 'Roadmap',
+      content: (
+        <div className="px-6 py-8 h-full flex flex-col items-center justify-center">
+          <div className="flex items-center justify-center w-16 h-16 bg-white rounded-full shadow-lg mb-4">
+            <i className="fas fa-road text-3xl text-teal-500"></i>
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-white drop-shadow-md mb-3">
+            Our Vision for Impact
+          </h2>
+          <h3 className="text-xl md:text-2xl font-medium text-white drop-shadow-md mb-10">
+            Key Features Driving WaziGov’s Mission for SDG 5 & 10
+          </h3>
+          
+          <div className="w-full max-w-5xl">
+            {/* Feature Cards */}
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-6">
+              {[
+                {
+                  icon: 'sms',
+                  title: 'SMS Integration',
+                  desc: 'Offline policy summaries via SMS (e.g., “Text HEALTH to 1234”), vital for rural areas with 10% internet access.',
+                },
+                {
+                  icon: 'language',
+                  title: 'Expanded Languages',
+                  desc: 'Lugbara, Acholi, Runyankole added, with AI translation for 10+ African languages.',
+                },
+                {
+                  icon: 'share-alt',
+                  title: 'Social Media',
+                  desc: 'TikTok/YouTube channels for audio summaries, engaging urban youth.',
+                },
+                {
+                  icon: 'broadcast-tower',
+                  title: 'Radio Partnerships',
+                  desc: 'Broadcasts on Radio Pacis reach low-literacy users without phones.',
+                },
+                {
+                  icon: 'bell',
+                  title: 'Policy Alerts',
+                  desc: 'AI-driven notifications for relevant policies via app and SMS.',
+                },
+                {
+                  icon: 'comments',
+                  title: 'Community Feedback',
+                  desc: 'SMS/app feedback refines summaries, fostering ownership.',
+                },
+                {
+                  icon: 'mobile-alt',
+                  title: 'Offline App',
+                  desc: 'React Native app with offline caching for low-connectivity areas.',
+                },
+  
+              ].map((item, index) => (
+                <div
+                  key={index}
+                  className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl shadow-lg p-6 transform transition-all hover:scale-105 border-t-2 border-yellow-400"
+                >
+                  <div className="flex items-center mb-4">
+                    <div className="bg-white text-coral-600 w-10 h-10 rounded-full flex items-center justify-center mr-3 shadow-md">
+                      <i className={`fas fa-${item.icon} text-xl text-yellow-500`}></i>
+                    </div>
+                    <p className="text-teal-600 font-medium text-lg">{item.title}</p>
+                  </div>
+                  <p className="text-teal-600 text-sm">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      ),
+      bg: 'bg-gradient-to-br from-coral-600 to-teal-600',
+      style: {
+        position: 'relative',
+        overflow: 'hidden',
+      },
+      after: `
+        &::after {
+          content: "\\f018";
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          opacity: 0.1;
+          color: white;
+          font-size: 100px;
+          background: repeating-linear-gradient(
+            45deg,
+            transparent,
+            transparent 50px,
+            rgba(255, 255, 255, 0.2) 50px,
+            rgba(255, 255, 255, 0.2) 100px
+          );
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          z-index: 0;
+        }
+      `,
+    },
+    {
+      title: 'Join Us!',
+      content: (
+        <div className="flex flex-col items-center justify-center text-center space-y-6 px-6 h-full">
+          <div className="flex items-center justify-center w-32 h-32 bg-white rounded-full shadow-xl">
+            <i className="fas fa-hands-helping text-6xl text-teal-600"></i>
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-white drop-shadow-md">
+            Empower Women with WaziGov
+          </h2>
+          <h3 className="text-xl md:text-2xl font-medium text-white drop-shadow-md">
+            Support Us at GNEC Hackathon 2025
+          </h3>
+          <div className="bg-white p-4 rounded-lg max-w-xl">
+            <p className="text-xl text-teal-500 font-medium">
+              Seeking $10,000 to Reach 100,000 Women
+            </p>
+          </div>
+          <a
+            href="https://www.linkedin.com/in/maku-mazakpe/"
+            target="_blank"
+            className="inline-flex items-center bg-yellow-500 text-white px-8 py-4 rounded-full text-xl font-bold shadow-lg hover:bg-yellow-600 transition-all"
+            aria-label="Join our Discord community"
           >
-            <div className="w-16 h-16 bg-gradient-to-r from-teal-500 to-coral-500 rounded-full flex items-center justify-center text-white text-xl mb-3">
-              {member.name.split(' ').map(n => n[0]).join('')}
-            </div>
-            <p className="text-lg font-semibold text-teal-500">{member.name}</p>
-            <p className="text-sm text-gray-500 mb-2">{member.role}</p>
-            <Link
-              href={member.linkedin}
-              target="_blank"
-              className="text-teal-500 flex items-center text-coral-500 hover:text-coral-600 transition-colors"
-              aria-label={`Visit ${member.name}'s LinkedIn profile`}
-            >
-              <i className="text-teal-500 fab fa-linkedin mr-1"></i> LinkedIn
-            </Link>
-          </div>
-        ))}
-      </div>
-    ),
-    bg: 'bg-yellow-100',
-  },
-  {
-    title: 'Roadmap',
-    content: (
-      <div className="flex flex-col items-center px-4">
-        <div className="relative w-full max-w-3xl">
-          <div className="hidden md:block absolute h-1 bg-teal-500 top-8 left-0 right-0"></div>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-            <div className="flex flex-col items-center">
-              <div className="bg-teal-500 text-white w-12 h-12 rounded-full flex items-center justify-center mb-2 z-10">
-                <i className="fas fa-rocket text-xl"></i>
-              </div>
-              <p className="font-bold text-teal-500">Q2 2025</p>
-              <p className="text-center text-sm text-gray-600">MVP in Uganda, Kenya</p>
-            </div>
-            <div className="flex flex-col items-center">
-              <div className="bg-teal-500 text-white w-12 h-12 rounded-full flex items-center justify-center mb-2 z-10">
-                <i className="fas fa-expand-arrows-alt text-xl"></i>
-              </div>
-              <p className="font-bold text-teal-500">Q4 2025</p>
-              <p className="text-center text-sm text-gray-600">Expand to 5 countries</p>
-            </div>
-            <div className="flex flex-col items-center">
-              <div className="bg-teal-500 text-white w-12 h-12 rounded-full flex items-center justify-center mb-2 z-10">
-                <i className="fas fa-language text-xl"></i>
-              </div>
-              <p className="font-bold text-teal-500">2026</p>
-              <p className="text-center text-sm text-gray-600">Add 3 languages</p>
-            </div>
-            <div className="flex flex-col items-center">
-              <div className="bg-teal-500 text-white w-12 h-12 rounded-full flex items-center justify-center mb-2 z-10">
-                <i className="fas fa-chart-line text-xl"></i>
-              </div>
-              <p className="font-bold text-teal-500">2027</p>
-              <p className="text-center text-sm text-gray-600">Scale to 20M users</p>
-            </div>
-          </div>
+            <i className="fab fa-linkedin mr-3 text-2xl"></i> Follow On LinkedIn
+          </a>
         </div>
-      </div>
-    ),
-    bg: 'bg-coral-50',
-  },
-  {
-    title: 'Join Us!',
-    content: (
-      <div className="flex flex-col items-center text-center space-y-6 px-4">
-        <div className="flex items-center justify-center w-20 h-20 bg-white rounded-full shadow-lg">
-          <i className="fas fa-hands-helping text-4xl text-teal-500"></i>
-        </div>
-        <p className="text-2xl md:text-3xl font-semibold text-white">
-          Empower Women & Communities with WaziGov
-        </p>
-        <p className="text-lg text-white">Support us at GNEC Hackathon 2025</p>
-        <Link
-          href="https://discord.gg/n5pcCHcGC6"
-          target="_blank"
-          className="inline-flex items-center bg-white text-teal-500 px-6 py-3 rounded-full text-lg font-medium shadow-lg hover:bg-teal-50 transition-all"
-          aria-label="Join our Discord community"
-        >
-          <i className="fab fa-discord mr-2"></i> Join Our Discord
-        </Link>
-      </div>
-    ),
-    bg: 'bg-gradient-to-br from-coral-600 to-teal-600',
-  },
-];
+      ),
+      bg: 'bg-gradient-to-br from-coral-700 to-teal-700',
+      style: {
+        position: 'relative',
+      },
+      after: `
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          opacity: 0.1;
+          background: repeating-linear-gradient(
+            135deg,
+            transparent,
+            transparent 50px,
+            rgba(255, 255, 255, 0.2) 50px,
+            rgba(255, 255, 255, 0.2) 100px
+          );
+          z-index: 0;
+        }
+      `,
+    }
+  ];
+
 
   // Fullscreen toggle
   const toggleFullscreen = () => {
