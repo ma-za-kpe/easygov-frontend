@@ -197,7 +197,7 @@ export default function SummaryCard({ summary, language }: SummaryCardProps) {
 
   // Safely access fields according to the interface
   const getTitle = () => summary.document_title;
-  const getSummaryText = () => summary.original_text || summary.text;
+  const getSummaryText = () => summary.text;
   const getExplanation = () => summary.explanation || "This budget impacts gender equality and reduced inequalities in your region.";
   const getCreatedDate = () => {
     try {

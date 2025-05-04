@@ -40,6 +40,8 @@ export default function HomeContent({ language }: { language: string }) {
       setLoading(true);
       try {
         const summariesData = await fetchSummaries(region, language);
+        console.log(`Fetching summaries summariesData: ${summariesData.forEach((summary) => console.log(summary))}`);
+
         const regionsData = await fetchRegions();
         setSummaries(summariesData);
         setFilteredSummaries(summariesData);
@@ -236,12 +238,10 @@ export default function HomeContent({ language }: { language: string }) {
               </div>
             ) : (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {filteredSummaries.map((summary) => (
-                  <div key={summary.id.toString()} className="flex">
-                    <SummaryCard summary={summary} language={language} />
-                  </div>
-                ))}
-              </div>
+              {filteredSummaries.map((summary) => (
+                <SummaryCard key={summary.id.toString()} summary={summary} language={language} />
+              ))}
+            </div>
             )}
           </div>
 
