@@ -339,11 +339,11 @@ export default function SummaryCard({ summary, language }: SummaryCardProps) {
                 id="voice-language"
                 value={selectedVoiceLanguage}
                 onChange={handleVoiceLanguageChange}
-                className="border border-gray-300 rounded-lg py-1 px-2 w-full focus:outline-none focus:ring-2 focus:ring-teal-500"
+                className="border border-gray-300 rounded-lg py-1 px-2 w-full focus:outline-none focus:ring-2 focus:ring-teal-500 text-black bg-white"
                 aria-label="Select voice language"
               >
                 {availableVoices.map(lang => (
-                  <option key={lang} value={lang}>
+                  <option key={lang} value={lang} className="text-black">
                     {SUPPORTED_LANGUAGES[lang].name}
                   </option>
                 ))}
