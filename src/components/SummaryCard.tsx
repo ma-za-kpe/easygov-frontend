@@ -107,12 +107,12 @@ export default function SummaryCard({ summary, language }: SummaryCardProps) {
       case 'title':
         return summary.document_title || summary.document_title;
       case 'original':
-        return summary.original_text || summary.original_text || summary.text;
+        return summary.text;
       case 'explanation':
         return summary.explanation || "This budget impacts gender equality and reduced inequalities in your region.";
       case 'all':
       default:
-        return `${summary.document_title || summary.document_title}. ${summary.original_text || summary.explanation || summary.text}. ${summary.explanation || ''}`;
+        return `${summary.document_title || summary.document_title}. ${summary.text || summary.explanation || summary.text}. ${summary.explanation || ''}`;
     }
   };
 
