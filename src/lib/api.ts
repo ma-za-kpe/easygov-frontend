@@ -36,8 +36,6 @@ export const fetchSummaries = async (region: string, language: string): Promise<
     
     const response = await api.get(url);
 
-    console.log(`Fetching summaries for response: ${response}`);
-
     return response.data;
   } catch (error) {
     console.error('Error fetching summaries:', error);

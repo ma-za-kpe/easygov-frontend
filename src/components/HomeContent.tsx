@@ -40,7 +40,6 @@ export default function HomeContent({ language }: { language: string }) {
       setLoading(true);
       try {
         const summariesData = await fetchSummaries(region, language);
-        console.log(`Fetching summaries summariesData: ${summariesData.forEach((summary) => console.log(summary))}`);
 
         const regionsData = await fetchRegions();
         setSummaries(summariesData);
